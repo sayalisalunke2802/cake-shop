@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cake Shop</title>
+    <style>
+        .xyz{
+            color :rgb(235, 216, 212);
+            color:#d8a997;
+            color: rgb(229, 158, 156);
+            accent-color:#ffd8ba;
+        }
+        body{
+            padding:0 ;
+            margin: 0;
+            background-color:bisque;
+        }
+        .navbar{
+            background-color:rgb(229, 158, 156);
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            padding:10px ;
+        }
+        .navbar-icon{
+            height: 50px;
+
+        }
+        .navbar-brand-name{
+            font-size: 30px;
+            color: #fff;
+            font-weight: bold;
+            margin-left: 10px;
+            padding-bottom: 10px;
+        }        
+        .navbar-menu{
+            font-size: 20px;
+            font-weight: bold;
+            margin-left: 100px;
+            cursor: pointer;
+            background-color: rgb(235, 216, 212); 
+            padding:5px 20px ;
+            border-radius: 20px;
+
+        }
+        .navbar-menu:hover{
+            background-color:palevioletred ;
+            box-shadow: 0 0 5px 2px #fff;
+            padding: 7px 25px;
+            transition: 0.5s;
+        }
+        .navbar-menu-container{
+            margin-left:  200px; 
+
+        }
+        .shop-img{
+            width: 500px;
+            margin: 30px;
+        }
+        .header-container{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            align-items: center;
+
+        }
+        .header-title{
+            font-size: 50px;
+            color:rgb(229, 158, 156) ;
+        }
+        .header-description{
+            font-size:30px;
+            color: black;
+
+        }
+        .header-explore-btn{
+            font-size: 20px;
+            font-weight: bold;
+            background-color:rgb(229, 158, 
+            156) ;
+            color: #fff;
+            padding:10px 20px;
+            border-radius: 30px;
+            border: none;
+            margin-top: 20px;
+            cursor: pointer;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .our-feature-heading{
+            font-size: 50px;
+            color:rgb(229, 158, 156) ;
+            text-align: center;
+            margin-top: 50px;
+         }
+         .feature-card{
+            width: 300px;
+            background-color: #fff;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 15px;
+            box-shadow: 0 0 5px 2px rgba(0,0,0,0.2);
+            position: relative;
+        }
+         .ico-feature{
+            font-size: 50px;
+            position: absolute;
+            top: -45px;
+            left: 120px;
+          background-color: #fff;
+          padding: 10px;
+          border:1px solid rgb(229, 158, 156) ;
+          border-radius:15px ;
+          color: rgb(229, 158, 156) ;
+          width: 70px;
+          text-align: center;
+         }
+         .feature-title{
+            text-align: center;
+            color:rgb(229, 158, 156)  ;
+            font-size: 22px;
+         }
+         .feature-description{
+            text-align: center;
+         }
+         .feature-container{
+            display:flex;
+            justify-content: space-around;
+            margin-top: 50px;
+            flex-wrap: wrap;
+         }
+
+        .feature-card{
+            margin-top: 80px;
+
+        }
+        .our-cakes-heading{
+            font-size: 50px;
+            color:rgb(229, 158, 156)  ;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .cake-card{
+            background-color: #fff;
+            width: 300px;
+            padding: 40px 20px;
+            margin: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0 ,0 ,0 ,0.2);
+
+        }
+        .cake-card-img{
+            height: 100px;
+            display: block;
+            margin: 10px auto;
+            filter: drop-shadow(0px 0px 10px rgb(235, 216, 212));
+        }
+        .cake-card-title{
+            text-align: center;
+            color:rgb(229, 158, 156)  ;
+            font-size:25px ;
+        }
+        .cake-card-price{
+            text-align: center;
+            color:rgb(229, 158, 156)  ;
+            font-size:23px ;
+
+        }
+        .order-now-btn{
+            font-size: 18px;
+           color: #fff;
+            background-color:rgb(229, 158, 
+            156) ;
+            padding:5px 20px;
+            border-radius: 20px;
+            border: none;
+            margin-top: 10px;
+            cursor: pointer;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+
+        }
+        .cake-container{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-top: 50px;
+        }
+        .review-img{
+            font-size: 50px;
+            position: absolute;
+            top: -55px;
+            left: 120px;
+          background-color: #fff;
+          padding: 10px;
+          border:1px solid rgb(229, 158, 156) ;
+          border-radius:50% ;
+          color: rgb(229, 158, 156) ;
+          width: 70px;
+          display: block;
+        }
+        .review-title{
+            padding-top: 20px;
+            text-align: center;
+            color:rgb(229, 158, 156)  ;
+            font-size: 22px;
+        }
+        .our-review-heading{
+            font-size: 50px;
+            color:rgb(229, 158, 156) ;
+            text-align: center;
+            margin-top: 50px;
+            margin-bottom: 20px;
+            
+        }
+        .footer{
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            display:block;
+            justify-content: center;
+            background-color: black;
+            color: #fff;
+
+        }
+        .footer-card{
+            margin-top: auto;
+            display:flex;
+            flex-direction: column;
+            align-items: flex-end;
+            justify-content: center;
+            margin-right: 80px;
+        }
+        .footer-contact{
+            margin-left: 200px;
+            margin-top: 50px;
+        }
+        @media only screen and(max-width:600px){
+        .navbar-menu-container{
+            margin-left:auto;
+            margin-right: auto; 
+        }
+        .navbar{
+            flex-direction: column;
+        }
+        .navbar-menu{
+            display: block;
+            margin: 10px;
+            width: 100%;
+            text-align: center;
+        }
+        .shop-img{
+            width: 250px;
+        }
+        .header-title{
+            font-size: 30px;
+        }
+        .header-description{
+            font-size: 20px;
+        }
+        .header-explore-btn{
+            font-size: 15px;
+            display: block;
+            margin-left:auto;
+            margin-right: auto; 
+        }
+        .feature-card{
+            margin-top: 80px;
+        }
+        }
+    @media only screen and(min-width:601px)and(max-width:800px){
+        .navbar-menu-container{
+            margin-left:auto ;
+            margin-right: auto;
+            margin-top: 20px;
+        }
+        .header-explore-btn{
+            font-size: 25px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .feature-card{
+            margin-top: 0px;
+        }
+        @media only screen and(min-width:801px)and(max-width:1400px)
+        {
+          margin-top:100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="navbar-brand">
+            <img src="./img/birthday-cake(1).png" class="navbar-icon">
+            <span class="navbar-brand-name">Sayali's Cake Studio</span>
+         
+        </div>
+
+        <div class="navbar-menu-container">
+    <span class="navbar-menu">Home</span>
+    <span class="navbar-menu">About</span>
+    <span class="navbar-menu">Service</span>
+    <span class="navbar-menu">Contact</span>
+ 
+       </div>
+    </div>
+<div class="header-container">
+<div>
+<img src="./img/bakery.png" class="shop-img">
+</div>
+<div>
+<h1 class="header-title">We bake your dreams..</h1>
+<p class="header-description">Order your favourite cake now!🎂</p>
+<button class="header-explore-btn" type="button" >Explore Cakes👉</button>
+</div>
+</div>
+<h1 class="our-feature-heading"> Why choose us?</h1>
+<div class="feature-container">
+    <div class="feature-card">
+        <i class="fa-solid fa-fire-burner ico-feature"></i>
+        <h3 class="feature-title">Freshly baked cakes</h3>
+        <p class="feature-description"> Our cakes are freshly baked and are delivered to you within 4 hours of baking.</p>
+    </div>
+    <div class="feature-card">
+        <i class="fa-solid fa-truck ico-feature"></i>
+        <h3 class="feature-title">Free Delivery</h3>
+        <p class="feature-description"> We provide free delivery of cake within 10 km of our shop.</p>
+    </div>
+    <div class="feature-card">
+        <i class="fa-solid fa-egg ico-feature"></i>
+        <h3 class="feature-title">Eggless Cake</h3>
+        <p class="feature-description">We also provide eggless cakes for our vegetarian customers.</p>
+    </div>
+    <div class="feature-card">
+        <i class="fa-sharp fa-solid fa-cake-candles ico-feature"></i> 
+        <h3 class="feature-title">Unique Design</h3>
+        <p class="feature-description"> We provide unique designs for your cake.You can also customise your cake.</p>
+    </div>
+</div>
+<h1 class="our-cakes-heading">Our Cakes</h1>
+<div class="cake-container">
+    <div class="cake-card">
+        <img src="./img/strobberry-cake.png" class="cake-card-img"/>
+        <h3 class="cake-card-title">Stroberry Cake</h3>
+        <p class="cake-card-price">₹ 500</p>
+         <button class="order-now-btn">Order Now</button>
+   </div>
+   <div class="cake-card">
+        <img src="./img/chees-cake.png" class="cake-card-img"/>
+        <h3 class="cake-card-title">Chees Cake</h3>
+        <p class="cake-card-price">₹ 400</p>
+         <button class="order-now-btn">Order Now</button>
+   </div>
+   <div class="cake-card">
+        <img src="./img/angel-cake.png" class="cake-card-img"/>
+        <h3 class="cake-card-title">Angle Cake</h3>
+        <p class="cake-card-price">₹ 299</p>
+         <button class="order-now-btn">Order Now</button>
+   </div>
+   <div class="cake-card">
+        <img src="./img/cupcake.png" class="cake-card-img"/>
+        <h3 class="cake-card-title">Cupcake</h3>
+        <p class="cake-card-price">₹ 100</p>
+         <button class="order-now-btn">Order Now</button>
+   </div>
+   <div class="cake-card">
+        <img src="./img/pestry-cake.png" class="cake-card-img"/>
+        <h3 class="cake-card-title">Pestry cake</h3>
+        <p class="cake-card-price">₹ 150</p>
+         <button class="order-now-btn">Order Now</button>
+   </div>
+   <div class="cake-card">
+        <img src="./img/star-cake.png" class="cake-card-img"/>
+        <h3 class="cake-card-title">Star Cake</h3>
+        <p class="cake-card-price">₹ 449</p>
+         <button class="order-now-btn">Order Now</button>
+   </div>
+   <div class="cake-card">
+        <img src="./img/burger-cake.png" class="cake-card-img"/>
+        <h3 class="cake-card-title">Burger Cake</h3>
+        <p class="cake-card-price">₹ 399</p>
+         <button class="order-now-btn">Order Now</button>
+   </div>
+   <div class="cake-card">
+        <img src="./img/birthday-cake.png" class="cake-card-img"/>
+        <h3 class="cake-card-title">Birthday cake</h3>
+        <p class="cake-card-price">₹ 600</p>
+         <button class="order-now-btn">Order Now</button>
+   </div>
+   <h1 class="our-review-heading">Customer Reviews</h1>
+   <div class="feature-container">
+    <div class="feature-card">
+        <img src="./img/ketaki.jpeg" class="review-img">
+        <h3 class="review-title">Ketaki Mategaonkar</h3>
+        <p class="feature-description">I just can’t resist the cheesecake, it was delicious and super sweet.  </p>
+    </div>
+    <div class="feature-card">
+        <img src="./img/suraj.png" class="review-img">
+        <h3 class="review-title">Suraj Shende</h3>
+        <p class="feature-description"> What a wonderful cake this is. I tried it and I simply loved it. </p>
+    </div>
+    <div class="feature-card">
+        <img src="./img/utkarsh.jpeg" class="review-img">
+        <h3 class="review-title">Utkarsh Sharma</h3>
+        <p class="feature-description"> I have never seen such a decorating and creative cake before.</p>
+    </div>
+    <div class="feature-card">
+        <img src="./img/pinki.png" class="review-img">
+        <h3 class="review-title">Pinki Hole</h3>
+        <p class="feature-description">Thank you so much for making our celebration greater indeed.</p>
+    </div></div>
+
+    <div class="footer">
+        <div class="footer-contact">
+        
+        <a href="./pages/about.html/>About</a>
+        
+        <a href="./pages/about.html/>Contact</a>
+    </div>
+       <div class="footer-card"> <h4> <b>Contact Us</b> </h4>
+    <img src="./img/twitter.png" height="20px"><br>
+       <img src="./img/mail.png" height="20px">
+  
+        </div>
+    </div>
+
+<script src="https://kit.fontawesome.com/2cd9778650.js" crossorigin="anonymous"></script>
+</body>
+</html>
